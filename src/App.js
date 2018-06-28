@@ -28,16 +28,18 @@ class App extends React.Component {
     // convert fetch response to JSON format
     const data = await api_call.json();
     console.log(data);
-    // Props are like html attributes. name them whatever you want. set them as JS expressions.
-    // Set values of state. Don't ever directly manipulate "state"
-    this.setState({
-      temperature: data.main.temp,
-      city: data.name,
-      country: data.sys.country,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      error: ""
-    });
+    if(city && country) {
+      // Props are like html attributes. name them whatever you want. set them as JS expressions.
+      // Set values of state. Don't ever directly manipulate "state"
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
+    }
   }
 
   render() {
