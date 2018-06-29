@@ -5,6 +5,8 @@ import Weather from "./components/Weather"
 
 const API_KEY = "e952f7ce430503e397d8b4c21fda5ceb";
 
+// Two kinds of components: Stateless Functional Components
+
 class App extends React.Component {
   // State is an object that lives within a component.
   // Responsible for keepign track of chagnign data within a component 
@@ -39,6 +41,15 @@ class App extends React.Component {
         description: data.weather[0].description,
         error: ""
       });
+    } else {
+      this.setState({
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: "Please enter the value."
+      })
     }
   }
 
