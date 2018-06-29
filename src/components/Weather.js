@@ -19,6 +19,7 @@ export default Weather;
 
 // OR Stateless Functionless Components
 // import React from 'react';
+
 // const Weather = (props) => (
 //       return (
 //         <div>
