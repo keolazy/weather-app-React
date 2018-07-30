@@ -9,7 +9,7 @@ const API_KEY = "e952f7ce430503e397d8b4c21fda5ceb";
 
 class App extends React.Component {
   // State is an object that lives within a component.
-  // Responsible for keepign track of chagnign data within a component 
+  // Responsible for keeping track of changing data within a component 
   state = {
     temperature: undefined,
     city: undefined,
